@@ -3,11 +3,9 @@
     <h1>Artists</h1>
   </div>
   <div class = "col-auto">
-    <div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-top:50%;">
-      <button type="button" class="btn btn-success">Add</button>
-      <button type="button" class="btn btn-warning">Edit</button>
-      <button type="button" class="btn btn-danger">Delete</button>
-    </div>
+    <?php
+      include "view-artists-newform.php";
+    ?>
   </div>
 </div>
 
