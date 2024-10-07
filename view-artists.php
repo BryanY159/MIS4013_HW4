@@ -31,14 +31,14 @@
             <td><?php echo $artist['Genre']; ?></td>
             <td>
               <form method="post" action="">
-                <input type="hidden" name="AID" value="<?php echo $user['ArtistID']; ?>">
+                <input type="hidden" name="AID" value="<?php echo $artist['ArtistID']; ?>">
                 <input type = "hidden" name = "actionType" value = "Edit">
                 <button type="submit" class="btn btn-warning">Edit</button>
               </form>
             </td>
             <td>
               <form method="post" action="">
-                <input type="hidden" name="ArtistID" value="<?php echo $user['ArtistID']; ?>">
+                <input type="hidden" name="ArtistID" value="<?php echo $artist['ArtistID']; ?>">
                 <input type = "hidden" name = "actionType" value = "Delete">
                 <button type="submit" class="btn btn-danger">Delete</button>
               </form>
