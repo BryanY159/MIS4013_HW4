@@ -1,4 +1,4 @@
-<div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-top:10px;">
+<div style="margin-top:10px;">
   <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add</button>
 </div>
 
