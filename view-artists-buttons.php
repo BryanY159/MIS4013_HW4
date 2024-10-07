@@ -4,7 +4,7 @@
   <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
 </div>
 
-<!-- Modal -->
+<!-- Add Modal -->
 <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -13,11 +13,17 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Add Artist</button>
+        <form method="post" action="">
+          <div class="mb-3">
+            <label for="artistName" class="form-label">Artist Name</label>
+            <input type="text" class="form-control" id="artistName" name="artistName">
+          </div>
+          <div class="mb-3">
+            <label for="artistGenre" class="form-label">Artist Genre</label>
+            <input type="text" class="form-control" id="artistGenre" name="artistGenre">
+          </div>
+          <button type="submit" class="btn btn-primary">Add Artist</button>
+        </form>
       </div>
     </div>
   </div>
