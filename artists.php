@@ -7,7 +7,6 @@ include "view-header.php";
 
 if (isset($_POST['actionType'])) {
   
-  }
 }
 
 $artists = selectArtists();
