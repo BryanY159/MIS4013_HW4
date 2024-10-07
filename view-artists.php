@@ -40,7 +40,7 @@
               <form method="post" action="">
                 <input type="hidden" name="ArtistID" value="<?php echo $artist['ArtistID']; ?>">
                 <input type = "hidden" name = "actionType" value = "Delete">
-                <button type="submit" class="btn btn-danger" onclick="return confirm("Are you sure?");">Delete</button>
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</button>
               </form>
             </td>
             <td><a href="songs-by-artist.php?id=<?php echo $artist['ArtistID']; ?>">Songs</a></td>
