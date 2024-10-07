@@ -28,7 +28,7 @@ function insertArtist($Name, $Genre) {
     }
 }
 
-function updateCourse($Name, $Genre, $AID) {
+function updateArtist($Name, $Genre, $AID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE artists SET Name = ?, Genre = ? WHERE ArtistID = ?");
@@ -42,7 +42,7 @@ function updateCourse($Name, $Genre, $AID) {
     }
 }
 
-function deleteCourse($AID) {
+function deleteArtist($AID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("DELETE FROM artists WHERE ArtistID = ?");
