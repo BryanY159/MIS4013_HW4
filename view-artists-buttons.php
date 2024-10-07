@@ -22,6 +22,7 @@
             <label for="artistGenre" class="form-label">Artist Genre</label>
             <input type="text" class="form-control" id="artistGenre" name="artistGenre">
           </div>
+          <input type = "hidden" name = "actionType" value = "Add">
           <button type="submit" class="btn btn-primary">Add Artist</button>
         </form>
       </div>
