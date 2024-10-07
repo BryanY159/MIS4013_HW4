@@ -1,7 +1,5 @@
 <div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-top:10px;">
   <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add</button>
-  <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
-  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
 </div>
 
 <!-- Add Modal -->
