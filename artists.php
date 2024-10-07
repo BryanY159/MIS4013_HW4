@@ -15,7 +15,7 @@ if (isset($_POST['actionType'])) {
       }
       break;
     case "Delete":
-      if (deleteArtist($_POST['artistName'])) {
+      if (deleteArtist($_POST['ArtistID'])) {
         echo '<div class="alert alert-success" role="alert"> Artist Deleted Successfully </div>';
       } else {
         echo '<div class="alert alert-danger" role="alert"> Error: Artist Not Deleted </div>';
