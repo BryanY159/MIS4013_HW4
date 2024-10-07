@@ -17,6 +17,8 @@
         <th>Name</th>
         <th>Genre</th>
         <th></th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -27,6 +29,20 @@
             <td><?php echo $artist['ArtistID']; ?></td>
             <td><?php echo $artist['Name']; ?></td>
             <td><?php echo $artist['Genre']; ?></td>
+            <td>
+              <form method="post" action="">
+                <input type="hidden" name="AID" value="<?php echo $user['ArtistID']; ?>">
+                <input type = "hidden" name = "actionType" value = "Edit">
+                <button type="submit" class="btn btn-warning">Edit</button>
+              </form>
+            </td>
+            <td>
+              <form method="post" action="">
+                <input type="hidden" name="AID" value="<?php echo $user['ArtistID']; ?>">
+                <input type = "hidden" name = "actionType" value = "Delete">
+                <button type="submit" class="btn btn-danger">Delete</button>
+              </form>
+            </td>
             <td><a href="songs-by-artist.php?id=<?php echo $artist['ArtistID']; ?>">Songs</a></td>
           </tr>
           <?php
