@@ -13,12 +13,12 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="artistName" class="form-label">Artist Name</label>
-            <input type="text" class="form-control" id="artistName" name="artistName">
+            <label for="ArtistName" class="form-label">Artist Name</label>
+            <input type="text" class="form-control" id="ArtistName" name="ArtistName">
           </div>
           <div class="mb-3">
-            <label for="artistGenre" class="form-label">Artist Genre</label>
-            <input type="text" class="form-control" id="artistGenre" name="artistGenre">
+            <label for="ArtistGenre" class="form-label">Artist Genre</label>
+            <input type="text" class="form-control" id="ArtistGenre" name="ArtistGenre">
           </div>
           <input type = "hidden" name = "actionType" value = "Add">
           <button type="submit" class="btn btn-primary">Add Artist</button>
