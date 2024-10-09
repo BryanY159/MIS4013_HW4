@@ -11,7 +11,7 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="SongTitle<?php echo $song['SongID']; ?>" class="form-label">Song Name</label>
+            <label for="SongTitle<?php echo $song['SongID']; ?>" class="form-label">Song Title</label>
             <input type="text" class="form-control" id="SongTitle<?php echo $song['SongID']; ?>" name="SongTitle" value="<?php echo $song['Title']; ?>">
           </div>
           <div class="mb-3">
