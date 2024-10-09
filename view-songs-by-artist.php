@@ -32,7 +32,7 @@
             <td><?php echo $song['Genre']; ?></td>
             <td>
               <?php
-                include "view-songs-by-artist-edit.php";
+                // include "view-songs-by-artist-edit.php";
               ?>
             </td>
             <td>
