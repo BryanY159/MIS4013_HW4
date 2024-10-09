@@ -31,9 +31,8 @@
             <td><?php echo $song['Title']; ?></td>
             <td><?php echo $song['Genre']; ?></td>
             <td>
-              <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $song['SongID']; ?>">Edit</button>
               <?php
-                // include "view-songs-by-artist-edit.php";
+                include "view-songs-by-artist-edit.php";
               ?>
             </td>
             <td>
