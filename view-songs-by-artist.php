@@ -1,4 +1,13 @@
-<h1>Songs by Artist</h1>
+<div class = "row">
+  <div class = "col">
+    <h1>Songs by Artist</h1>
+  </div>
+  <div class = "col-auto">
+    <?php
+      include "view-songs-by-artist-add.php";
+    ?>
+  </div>
+</div>
 
 <div class="table-responsive">
   <table class="table">
