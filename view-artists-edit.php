@@ -12,13 +12,13 @@
         <form method="post" action="">
           <div class="mb-3">
             <label for="ArtistName<?php echo $artist['ArtistID']; ?>" class="form-label">Artist Name</label>
-            <input type="text" class="form-control" id="ArtistName<?php echo $artist['ArtistID']; ?>" name="ArtistName" value="<?php echo $artist['Name']; ?>">
+            <input type="text" class="form-control" id="ArtistName<?php echo $artist['ArtistID']; ?>" name="artistName" value="<?php echo $artist['Name']; ?>">
           </div>
           <div class="mb-3">
             <label for="ArtistGenre<?php echo $artist['ArtistID']; ?>" class="form-label">Artist Genre</label>
-            <input type="text" class="form-control" id="ArtistGenre<?php echo $artist['ArtistID']; ?>" name="ArtistGenre" value="<?php echo $artist['Genre']; ?>">
+            <input type="text" class="form-control" id="ArtistGenre<?php echo $artist['ArtistID']; ?>" name="artistGenre" value="<?php echo $artist['Genre']; ?>">
           </div>
-          <input type="hidden" name="ArtistID" value="<?php echo $artist['ArtistID']; ?>">
+          <input type="hidden" name="artistID" value="<?php echo $artist['ArtistID']; ?>">
           <input type = "hidden" name = "actionType" value = "Edit">
           <button type="submit" class="btn btn-primary">Edit Artist</button>
         </form>
