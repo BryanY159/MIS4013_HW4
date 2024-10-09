@@ -14,6 +14,13 @@ if (isset($_POST['actionType'])) {
         echo '<div class="alert alert-danger" role="alert"> Error: Artist Not Added </div>';
       }
       break;
+    case "Edit":
+      if (updateArtist($_POST['artistName'], $_POST['artistGenre'], $_POST['artistID'])) {
+        echo '<div class="alert alert-success" role="alert"> Artist Edited Successfully </div>';
+      } else {
+        echo '<div class="alert alert-danger" role="alert"> Error: Artist Not Edited </div>';
+      }
+      break;
     case "Delete":
       if (deleteArtist($_POST['ArtistID'])) {
         echo '<div class="alert alert-success" role="alert"> Artist Deleted Successfully </div>';
