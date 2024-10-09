@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?php echo song['SongID']; ?>">Edit</button>
+<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $song['SongID']; ?>">Edit</button>
 
 <!-- Edit Modal -->
 <div class="modal fade" id="editModal<?php echo song['SongID']; ?>" tabindex="-1" aria-labelledby="editModalLabel<?php echo song['SongID']; ?>" aria-hidden="true">
