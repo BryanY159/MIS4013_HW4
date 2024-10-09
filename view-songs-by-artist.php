@@ -17,6 +17,8 @@
         <th>SongID</th>
         <th>Title</th>
         <th>Genre</th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -28,6 +30,16 @@
             <td><?php echo $song['SongID']; ?></td>
             <td><?php echo $song['Title']; ?></td>
             <td><?php echo $song['Genre']; ?></td>
+            <td>
+              Button Later
+            </td>
+            <td>
+              <form method="post" action="">
+                <input type="hidden" name="SongID" value="<?php echo $song['SongID']; ?>">
+                <input type = "hidden" name = "actionType" value = "Delete">
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</button>
+              </form>
+            </td>
           </tr>
           <?php
         }
