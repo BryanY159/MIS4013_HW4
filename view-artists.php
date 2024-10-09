@@ -30,11 +30,9 @@
             <td><?php echo $artist['Name']; ?></td>
             <td><?php echo $artist['Genre']; ?></td>
             <td>
-              <form method="post" action="">
-                <input type="hidden" name="AID" value="<?php echo $artist['ArtistID']; ?>">
-                <input type = "hidden" name = "actionType" value = "Edit">
-                <button type="submit" class="btn btn-warning">Edit</button>
-              </form>
+              <?php
+                include "view-artists-edit.php";
+              ?>
             </td>
             <td>
               <form method="post" action="">
