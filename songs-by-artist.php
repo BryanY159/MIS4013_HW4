@@ -25,7 +25,6 @@ if (isset($_POST['actionType'])) {
       }
       break;
     */
-    /*
     case "Delete":
       if (deleteSong($_POST['SongID'])) {
         echo '<div class="alert alert-success" role="alert"> Song Deleted Successfully </div>';
@@ -33,7 +32,6 @@ if (isset($_POST['actionType'])) {
         echo '<div class="alert alert-danger" role="alert"> Error: Song Not Deleted </div>';
       }
       break;
-    */
   }
 }
 
