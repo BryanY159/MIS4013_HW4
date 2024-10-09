@@ -31,7 +31,9 @@
             <td><?php echo $song['Title']; ?></td>
             <td><?php echo $song['Genre']; ?></td>
             <td>
-              Button Later
+              <?php
+                include "view-songs-by-artist-edit.php";
+              ?>
             </td>
             <td>
               <form method="post" action="">
