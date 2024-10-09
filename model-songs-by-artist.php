@@ -29,7 +29,7 @@ function insertSong($Title, $Genre, $AID) {
     }
 }
 
-function updateSong($Title, $Genre, $,AID, $SID) {
+function updateSong($Title, $Genre, $AID, $SID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE songs SET Name = ?, Genre = ?, ArtistID = ? WHERE SongID = ?");
