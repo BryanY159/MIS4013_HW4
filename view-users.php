@@ -18,6 +18,7 @@
         <th>Subscription Type</th>
         <th></th>
         <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -28,6 +29,11 @@
             <td><?php echo $user['UserID']; ?></td>
             <td><?php echo $user['Username']; ?></td>
             <td><?php echo $user['SubscriptionType']; ?></td>
+            <td>
+              <?php
+                include "view-users-edit.php";
+              ?>
+            </td>
             <td>
               <form method="post" action="">
                 <input type="hidden" name="UserID" value="<?php echo $user['UserID']; ?>">
