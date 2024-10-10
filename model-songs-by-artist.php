@@ -33,7 +33,7 @@ function updateSong($Title, $Genre, $SID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE songs SET Title = ?, Genre = ? WHERE SongID = ?");
-        $stmt->bind_param("ssi", $Name, $Genre, $SID);
+        $stmt->bind_param("ssi", $Title, $Genre, $SID);
         $success = $stmt->execute();
         $conn->close();
         return $success;
