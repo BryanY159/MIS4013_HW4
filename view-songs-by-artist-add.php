@@ -20,7 +20,7 @@
             <label for="SongGenre" class="form-label">Song Genre</label>
             <input type="text" class="form-control" id="SongGenre" name="SongGenre">
           </div>
-          <input type="hidden" name="ArtistID" value=26>
+          <input type="hidden" name="ArtistID" value="<?php $_GET['id']; ?>">
           <input type = "hidden" name = "actionType" value = "Add">
           <button type="submit" class="btn btn-primary">Add Song</button>
         </form>
