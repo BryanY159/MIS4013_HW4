@@ -15,7 +15,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title"><?php echo $playlist['PlaylistName']; ?></h2>
-                        <h class="card-title"><?php echo $playlist['Username']; ?></h>
+                        <h class="card-subtitle"><?php echo $playlist['Username']; ?></h>
                         <p class="card-text">
                             <ul class="list-group">
                                 <?php
