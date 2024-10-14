@@ -32,7 +32,13 @@
                                 <?php
                                 $songs = selectSongsByPlaylist($playlist['PlaylistName']);
                                 while ($song = $songs->fetch_assoc()) { ?>
-                                    <li class="list-group-item"><?php echo $song['Title']; ?></li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <?php echo $song['Title']; ?>
+                                        <span>
+                                            <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $song['SongID']; ?>">Edit</button>
+                                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal<?php echo $song['SongID']; ?>">Delete</button>
+                                        </span>
+                                    </li>
                                 <?php } ?>
                             </ul>
                         </p>
