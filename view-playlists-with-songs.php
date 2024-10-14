@@ -20,7 +20,7 @@
                             <h class="card-subtitle"><?php echo $playlist['Username']; ?></h>
                           </div>
                           <div class = "col-auto">
-                            <div style="margin-top:10px;">
+                            <div>
                               <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add</button>
                             </div>
                             <?php
