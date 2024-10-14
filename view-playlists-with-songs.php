@@ -30,7 +30,7 @@
                           </div>
                           <div class = "col-auto">
                             <div>
-                              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addSongModal">Add Song</button>
+                              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addSongModal">Add</button>
                             </div>
                             <?php
                             ?>
