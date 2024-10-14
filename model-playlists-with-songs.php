@@ -3,7 +3,7 @@
 function selectPlaylists() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("select PlaylistName, Username from playlists p join users u on p.UserID = u.userID;");
+        $stmt = $conn->prepare("select Distinct PlaylistName, Username from playlists p join users u on p.UserID = u.userID;");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
