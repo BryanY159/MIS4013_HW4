@@ -4,9 +4,10 @@
     </div>
     <div class = "col-auto">
         <div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-top:10px;">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#showUsersModal">Show Users</button>
             <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addPlaylistModal">Add</button>
-            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#addPlaylistModal">Edit</button>
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#addPlaylistModal">Delete</button>
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPlaylistModal">Edit</button>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletePlaylistModal">Delete</button>
         </div>   
     </div>
 </div>
