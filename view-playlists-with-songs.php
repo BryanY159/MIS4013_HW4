@@ -14,8 +14,19 @@
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-body">
-                        <h2 class="card-title"><?php echo $playlist['PlaylistName']; ?></h2>
-                        <h class="card-subtitle"><?php echo $playlist['Username']; ?></h>
+                        <div class = "row">
+                          <div class = "col">
+                            <h3 class="card-title"><?php echo $playlist['PlaylistName']; ?></h3>
+                            <h class="card-subtitle"><?php echo $playlist['Username']; ?></h>
+                          </div>
+                          <div class = "col-auto">
+                            <div style="margin-top:10px;">
+                              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add</button>
+                            </div>
+                            <?php
+                            ?>
+                          </div>
+                        </div>
                         <p class="card-text">
                             <ul class="list-group">
                                 <?php
