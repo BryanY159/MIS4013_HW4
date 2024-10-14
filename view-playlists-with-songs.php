@@ -1,4 +1,13 @@
-<h1>Playlists with Songs</h1>
+<div class = "row">
+    <div class = "col">
+        <h1>Playlists with Songs</h1>
+    </div>
+    <div class = "col-auto">
+        <div>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addPlaylistModal">Add Playlist</button>
+        </div>   
+    </div>
+</div>
 
 <div class="container">
     <div class="row">
@@ -21,7 +30,7 @@
                           </div>
                           <div class = "col-auto">
                             <div>
-                              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add</button>
+                              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addSongModal">Add Song</button>
                             </div>
                             <?php
                             ?>
