@@ -21,7 +21,7 @@
                                 <?php
                                 $songs = selectSongsByPlaylist($playlist['PlaylistName']);
                                 while ($song = $songs->fetch_assoc()) { ?>
-                                    <li class="list-group-item"> Test <?php echo $song['Title']; ?></li>
+                                    <li class="list-group-item"><?php echo $song['Title']; ?></li>
                                 <?php } ?>
                             </ul>
                         </p>
