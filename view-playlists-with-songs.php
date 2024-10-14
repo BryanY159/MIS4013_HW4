@@ -3,7 +3,7 @@
         <h1>Playlists with Songs</h1>
     </div>
     <div class = "col-auto">
-        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-top:10px;">
             <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addPlaylistModal">Add</button>
             <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#addPlaylistModal">Edit</button>
             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#addPlaylistModal">Delete</button>
