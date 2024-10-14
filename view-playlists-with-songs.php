@@ -5,8 +5,8 @@
         <?php 
         $count = 0;
         while($playlist = $playlists->fetch_assoc()) { 
-            if ($count % 4 == 0 && $count != 0) { 
-                // Close the current row and start a new one every 4 cards
+            if ($count % 3 == 0 && $count != 0) { 
+                // Close the current row and start a new one every 3 cards
                 echo '</div><div class="row">';
             }
             $count++;
