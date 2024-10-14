@@ -4,7 +4,7 @@
     </div>
     <div class = "col-auto">
         <div style="margin-top:10px;">
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addPlaylistModal">Add</button>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addPlaylistModal">Add Playlist</button>
         </div>   
     </div>
 </div>
