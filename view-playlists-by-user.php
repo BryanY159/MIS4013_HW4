@@ -6,6 +6,8 @@
       <tr>
         <th>Username</th>
         <th>Playlist Name</th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -15,6 +17,8 @@
           <tr>
             <td><?php echo $playlist['Username']; ?></td>
             <td><?php echo $playlist['PlaylistName']; ?></td>
+            <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $playlist['PlaylistName']; ?>">Edit</button></td>
+            <td><button type="button" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</button></td>
           </tr>
           <?php
         }
