@@ -5,8 +5,8 @@
         <?php 
         $count = 0;
         while($playlist = $playlists->fetch_assoc()) { 
-            if ($count % 3 == 0 && $count != 0) { 
-                // Close the current row and start a new one every 3 cards
+            if ($count % 4 == 0 && $count != 0) { 
+                // Close the current row and start a new one every 4 cards
                 echo '</div><div class="row">';
             }
             $count++;
@@ -33,8 +33,8 @@
                                 $songs = selectSongsByPlaylist($playlist['PlaylistName']);
                                 while ($song = $songs->fetch_assoc()) { ?>
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <?php echo $song['Title']; ?>
-                                        <span>
+                                        <span class="text-truncate" style="max-width: 70%;"><?php echo $song['Title']; ?></span>
+                                        <span class="flex-shrink-0">
                                             <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $song['SongID']; ?>">Edit</button>
                                             <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal<?php echo $song['SongID']; ?>">Delete</button>
                                         </span>
