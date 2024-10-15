@@ -1,6 +1,6 @@
-<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $cleanedPlaylistName ?>">Edit</button>
-
 <?php $cleanedPlaylistName = str_replace(' ', '_', $playlist['PlaylistName']); ?>
+
+<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $cleanedPlaylistName ?>">Edit</button>
 
 <!-- Edit Modal -->
 <div class="modal fade" id="editModal<?php echo $cleanedPlaylistName ?>" tabindex="-1" aria-labelledby="editModalLabel<?php echo $cleanedPlaylistName ?>" aria-hidden="true">
