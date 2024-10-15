@@ -15,7 +15,6 @@ if (isset($_POST['actionType'])) {
       }
       break;
     case "Edit":
-      // Figure out how to automatically collect OldPlaylistName 
       if (updatePlaylist($_POST['NewPlaylistName'], $_POST['OldPlaylistName'])) {
         echo '<div class="alert alert-success" role="alert"> Playlist Edited Successfully </div>';
       } else {
