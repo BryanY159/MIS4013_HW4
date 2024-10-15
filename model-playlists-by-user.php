@@ -15,4 +15,46 @@ function selectPlaylistsByUser($UID) {
     }
 }
 
+function insertPlaylist($UID, $SID, $PlaylistName) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("INSERT INTO playlists (UserID, SongID, PlaylistName) Values (?, ?, ?)");
+        $stmt->bind_param("iis", $UID, $SID, $PlaylistName);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function updatePlaylist($NewPlaylistName, $OldPlaylistName) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("UPDATE playlists SET PlaylistName = ? WHERE PlaylistName = ?");
+        $stmt->bind_param("ss", $NewPlaylistName, $OldPlaylistName);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function deletePlaylist($PlaylistName) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("DELETE FROM playlists WHERE PlaylistName = ?");
+        $stmt->bind_param("s", $PlaylistName);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 ?>
