@@ -60,7 +60,7 @@ function deletePlaylist($PlaylistName) {
 function selectSongsForInput() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT SongID, Title FROM songs ORDER BY SongID");
+        $stmt = $conn->prepare("SELECT SongID, Title FROM songs ORDER BY Title");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
