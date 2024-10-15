@@ -17,7 +17,7 @@
             <input type="text" class="form-control" id="PlaylistName" name="PlaylistName">
           </div>
           <div class="mb-3">
-            <label for="SongID" class="form-label">Username</label>
+            <label for="UserID" class="form-label">Username</label>
             <?php
               $userList = selectUsersForInput();
             ?>
