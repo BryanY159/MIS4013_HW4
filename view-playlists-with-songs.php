@@ -29,9 +29,9 @@
                             <h class="card-subtitle"><?php echo $playlist['Username']; ?></h>
                           </div>
                           <div class = "col-auto">
-                            <div>
-                              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add</button>
-                            </div>
+                            <?php
+                                include "view-playlists-with-songs-add.php";
+                            ?>
                             <?php
                             ?>
                           </div>
