@@ -32,7 +32,7 @@ if (isset($_POST['actionType'])) {
   }
 }
 
-$playlists = selectPlaylistsByUser($$_POST['UID']);
+$playlists = selectPlaylistsByUser($_POST['UID']);
 
 include "view-playlists-by-user.php";
 include "view-footer.php";
