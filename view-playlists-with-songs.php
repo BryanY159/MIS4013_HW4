@@ -44,7 +44,12 @@
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         <?php echo $song['Title']; ?>
                                         <span class="flex-shrink-0">
-                                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal<?php echo $song['SongID']; ?>">Delete</button>
+                                            <form method="post" action="">
+                                                <input type="hidden" name="PlaylistName" value="<?php echo htmlspecialchars($playlist['PlaylistName'], ENT_QUOTES, 'UTF-8'); ?>">
+                                                <input type="hidden" name="SongID" value="<?php echo $song['SongID']; ?>">
+                                                <input type = "hidden" name = "actionType" value = "Delete">
+                                                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</button>
+                                            </form>
                                         </span>
                                     </li>
                                 <?php } ?>
