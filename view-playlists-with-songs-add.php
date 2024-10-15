@@ -24,7 +24,7 @@
             </select>
           </div>
           <input type = "hidden" name = "UserID" value = "<?php echo $playlist['UserID']; ?>">
-          <input type = "hidden" name = "Username" value = "<?php echo $playlist['Username']; ?>">
+          <input type = "hidden" name = "PlaylistName" value = "<?php echo $playlist['PlaylistName']; ?>">
           <input type = "hidden" name = "actionType" value = "Add">
           <button type="submit" class="btn btn-primary">Add</button>
         </form>
