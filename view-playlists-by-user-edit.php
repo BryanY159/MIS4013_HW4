@@ -1,18 +1,20 @@
-<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $playlist['PlaylistID']; ?>">Edit</button>
+<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $cleanedPlaylistName ?>">Edit</button>
+
+<?php $cleanedPlaylistName = str_replace(' ', '_', $playlist['PlaylistName']); ?>
 
 <!-- Edit Modal -->
-<div class="modal fade" id="editModal<?php echo $playlist['PlaylistID']; ?>" tabindex="-1" aria-labelledby="editModalLabel<?php echo $playlist['PlaylistID']; ?>" aria-hidden="true">
+<div class="modal fade" id="editModal<?php echo $cleanedPlaylistName ?>" tabindex="-1" aria-labelledby="editModalLabel<?php echo $cleanedPlaylistName ?>" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="editModalLabel<?php echo $playlist['PlaylistID']; ?>">Edit Playlist</h1>
+        <h1 class="modal-title fs-5" id="editModalLabel<?php echo $cleanedPlaylistName ?>">Edit Playlist</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="NewPlaylistName<?php echo $playlist['PlaylistID']; ?>" class="form-label">Playlist Name</label>
-            <input type="text" class="form-control" id="NewPlaylistName<?php echo $playlist['PlaylistID']; ?>" name="NewPlaylistName" value="<?php echo $playlist['PlaylistName']; ?>">
+            <label for="NewPlaylistName<?php echo $cleanedPlaylistName ?>" class="form-label">Playlist Name</label>
+            <input type="text" class="form-control" id="NewPlaylistName<?php echo $cleanedPlaylistName ?>" name="NewPlaylistName" value="<?php echo $playlist['PlaylistName']; ?>">
           </div>
           <input type="hidden" name="OldPlaylistName" value="<?php echo $playlist['PlaylistName']; ?>">
           <input type="hidden" name="UID" value="<?php echo $_POST['UID']; ?>">
