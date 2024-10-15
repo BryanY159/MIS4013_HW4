@@ -26,7 +26,11 @@
           <tr>
             <td><?php echo $playlist['Username']; ?></td>
             <td><?php echo $playlist['PlaylistName']; ?></td>
-            <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $playlist['PlaylistName']; ?>">Edit</button></td>
+            <td>
+                <?php
+                    include "view-playlists-by-user-edit.php";
+                ?>
+            </td>
             <td>
                 <form method="post" action="">
                     <input type="hidden" name="PlaylistName" value="<?php echo htmlspecialchars($playlist['PlaylistName'], ENT_QUOTES, 'UTF-8'); ?>">
