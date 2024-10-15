@@ -38,8 +38,8 @@
               <?php } ?>
             </select>
           </div>
-          <input type = "hidden" name = "actionType" value = "AddPlaylist">
-          <button type="submit" class="btn btn-primary">Add Playlist</button>
+          <input type = "hidden" name = "actionType" value = "Add">
+          <button type="submit" class="btn btn-primary">Create Playlist</button>
         </form>
       </div>
     </div>
