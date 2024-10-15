@@ -20,7 +20,7 @@
             <label for="SongID" class="form-label">First Song's ID</label>
             <input type="text" class="form-control" id="SongID" name="SongID">
           </div>
-          <input type="hidden" name="UID" value="<?php echo $UID; ?>">
+          <input type="hidden" name="UID" value="<?php echo $_POST['UID']; ?>">
           <input type = "hidden" name = "actionType" value = "Add">
           <button type="submit" class="btn btn-primary">Add Playlist</button>
         </form>
