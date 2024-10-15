@@ -30,6 +30,7 @@
             <td>
                 <form method="post" action="">
                     <input type="hidden" name="PlaylistName" value="<?php echo $playlist('PlaylistName'); ?>">
+                    <input type="hidden" name="UID" value="<?php echo $_POST['UID']; ?>">
                     <input type = "hidden" name = "actionType" value = "Delete">
                     <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</button>
                 </form>
