@@ -5,7 +5,7 @@ require_once("model-playlists-by-user.php");
 $pageTitle = "Playlists by User";
 include "view-header.php";
 
-$postedUID = $_POST['UID']
+$postedUID = $_POST['UID'];
 
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
