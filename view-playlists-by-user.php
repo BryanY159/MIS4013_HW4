@@ -3,9 +3,9 @@
         <h1>Playlists by User</h1>
     </div>
     <div class = "col-auto">
-        <div style="margin-top:10px;">
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add</button>
-        </div>   
+        <?php
+              include "view-playlist-by-user-add.php";
+        ?>
     </div>
 </div>
 
