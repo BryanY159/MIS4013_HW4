@@ -18,7 +18,14 @@
           </div>
           <div class="mb-3">
             <label for="SongID" class="form-label">First Song's ID</label>
-            <input type="text" class="form-control" id="SongID" name="SongID">
+            <?php
+              $songList = selectSongsForInput();
+            ?>
+            <select class="form-select" id="SongID" name="SongID">
+              <?php while($song = $songList->fetch_assoc()) { ?>
+                <option value="<?php echo $song['SongID']; ?>"><?php echo $song['Title']; ?></option>
+              <?php } ?>
+            </select>
           </div>
           <input type="hidden" name="UID" value="<?php echo $_POST['UID']; ?>">
           <input type = "hidden" name = "actionType" value = "Add">
