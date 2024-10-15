@@ -5,12 +5,10 @@ require_once("model-playlists-by-user.php");
 $pageTitle = "Playlists by User";
 include "view-header.php";
 
-$postedUID = $_POST['UID'];
-
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
-      if (insertPlaylist($postedUID, $_POST['SongID'], $_POST['PlaylistName'])) {
+      if (insertPlaylist($_POST['UID'], $_POST['SongID'], $_POST['PlaylistName'])) {
         echo '<div class="alert alert-success" role="alert"> Playlist Added Successfully </div>';
       } else {
         echo '<div class="alert alert-danger" role="alert"> Error: Playlist Not Added </div>';
@@ -34,7 +32,7 @@ if (isset($_POST['actionType'])) {
   }
 }
 
-$playlists = selectPlaylistsByUser($postedUID);
+$playlists = selectPlaylistsByUser($$_POST['UID']);
 
 include "view-playlists-by-user.php";
 include "view-footer.php";
