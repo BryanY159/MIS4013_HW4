@@ -4,7 +4,7 @@
     </div>
    <div class = "col-auto">
        <?php
-            include "view-playlist-by-user-add.php";
+            include "view-playlists-by-user-add.php";
         ?>
     </div>
 </div>
