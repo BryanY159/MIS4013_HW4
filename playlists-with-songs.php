@@ -7,7 +7,7 @@ include "view-header.php";
 
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
-    case "AddPlaylist":
+    case "Add":
       if (insertPlaylist($_POST['UserID'], $_POST['SongID'], $_POST['PlaylistName'])) {
         echo '<div class="alert alert-success" role="alert"> Playlist Added Successfully </div>';
       } else {
