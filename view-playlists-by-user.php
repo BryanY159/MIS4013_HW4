@@ -2,8 +2,8 @@
     <div class = "col">
         <h1>Playlists by User</h1>
     </div>
-    <div class = "col-auto">
-        <?php
+   <div class = "col-auto">
+       <?php
             include "view-playlist-by-user-add.php";
         ?>
     </div>
