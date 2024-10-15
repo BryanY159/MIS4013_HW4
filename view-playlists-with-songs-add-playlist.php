@@ -23,7 +23,7 @@
             ?>
             <select class="form-select" id="UserID" name="UserID">
               <?php while($user = $userList->fetch_assoc()) { ?>
-                <option value="<?php echo $user['UserID']; ?>"><?php echo $song['Username']; ?></option>
+                <option value="<?php echo $user['UserID']; ?>"><?php echo $user['Username']; ?></option>
               <?php } ?>
             </select>
           </div>
