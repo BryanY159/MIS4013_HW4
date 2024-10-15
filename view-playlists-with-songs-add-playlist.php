@@ -17,7 +17,18 @@
             <input type="text" class="form-control" id="PlaylistName" name="PlaylistName">
           </div>
           <div class="mb-3">
-            <label for="SongID" class="form-label">First Song's ID</label>
+            <label for="SongID" class="form-label">Username</label>
+            <?php
+              $userList = selectUsersForInput();
+            ?>
+            <select class="form-select" id="UserID" name="UserID">
+              <?php while($user = $userList->fetch_assoc()) { ?>
+                <option value="<?php echo $user['UserID']; ?>"><?php echo $song['Username']; ?></option>
+              <?php } ?>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="SongID" class="form-label">First Song</label>
             <?php
               $songList = selectSongsForInput();
             ?>
@@ -27,7 +38,7 @@
               <?php } ?>
             </select>
           </div>
-          <input type = "hidden" name = "actionType" value = "Add">
+          <input type = "hidden" name = "actionType" value = "AddPlaylist">
           <button type="submit" class="btn btn-primary">Add Playlist</button>
         </form>
       </div>
