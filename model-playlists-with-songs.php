@@ -43,6 +43,20 @@ function insertPlaylist($UID, $SID, $PlaylistName) {
     }
 }
 
+function deletePlaylist($SongID, $PlaylistName) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("DELETE FROM playlists WHERE SongID = ? AND PlaylistName = ?");
+        $stmt->bind_param("is", $SongID, $PlaylistName);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 function selectSongsForInput() {
     try {
         $conn = get_db_connection();
