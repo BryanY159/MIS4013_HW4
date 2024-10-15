@@ -1,13 +1,15 @@
+<?php $cleanedPlaylistName2 = str_replace(' ', '_', $playlist['PlaylistName']); ?>
+
 <div>
-  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Add</button>
+  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal<?php echo $cleanedPlaylistName2 ?>">Add</button>
 </div>
 
 <!-- Add Modal -->
-<div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+<div class="modal fade" id="addModal<?php echo $cleanedPlaylistName2 ?>" tabindex="-1" aria-labelledby="addModalLabel<?php echo $cleanedPlaylistName2 ?>" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="addModalLabel">Add Song</h1>
+        <h1 class="modal-title fs-5" id="addModalLabel<?php echo $cleanedPlaylistName2 ?>">Add Song</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
