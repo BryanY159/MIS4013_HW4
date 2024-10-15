@@ -27,7 +27,13 @@
             <td><?php echo $playlist['Username']; ?></td>
             <td><?php echo $playlist['PlaylistName']; ?></td>
             <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $playlist['PlaylistName']; ?>">Edit</button></td>
-            <td><button type="button" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</button></td>
+            <td>
+                <form method="post" action="">
+                    <input type="hidden" name="UID" value="<?php echo $_POST['UID']; ?>">
+                    <input type = "hidden" name = "actionType" value = "Delete">
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</button>
+                </form>
+            </td>
           </tr>
           <?php
         }
