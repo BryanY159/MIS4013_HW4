@@ -48,7 +48,7 @@
                                                 <input type="hidden" name="PlaylistName" value="<?php echo htmlspecialchars($playlist['PlaylistName'], ENT_QUOTES, 'UTF-8'); ?>">
                                                 <input type="hidden" name="SongID" value="<?php echo $song['SongID']; ?>">
                                                 <input type = "hidden" name = "actionType" value = "Delete">
-                                                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</button>
+                                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');">Delete</button>
                                             </form>
                                         </span>
                                     </li>
