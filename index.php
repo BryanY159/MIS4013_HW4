@@ -13,9 +13,7 @@ include "view-header.php";
 
     const steps = [
       {
-        element: '#entire-navbar',
         intro: "Welcome to HW6 Dr. Bellah! Click on the following pages to find where my JavaScript libraries are implemented",
-        position: 'bottom'
       },
       {
         element: '#tutorial-button',
