@@ -36,13 +36,13 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="artists-page">
               <a class="nav-link" href="artists.php">Artists</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="users-page">
               <a class="nav-link" href="users.php">Users</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="playlists-page">
               <a class="nav-link" href="playlists-with-songs.php">Playlists with Songs</a>
             </li>
           </ul>
