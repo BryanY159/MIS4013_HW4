@@ -5,7 +5,14 @@ require_once("model-artists.php");
 $pageTitle = "Artists";
 include "view-header.php";
 
+$toastMessage = "";
+$toastType = "success";
+$actionType = "";
+
 if (isset($_POST['actionType'])) {
+
+  $actionType = $_POST['actionType'];
+  
   switch ($_POST['actionType']) {
     case "Add":
       if (insertArtist($_POST['ArtistName'], $_POST['ArtistGenre'])) {
@@ -43,15 +50,21 @@ include "view-footer.php";
 <script>
   const toastMessage = "<?php echo $toastMessage; ?>";
   const toastType = "<?php echo $toastType; ?>";
+  const actionType = "<?php echo $actionType; ?>";
 
   if (toastMessage) {
+    let backgroundColor = toastType === "error" ? "red" :
+                          actionType === "Add" ? "green" : 
+                          actionType === "Edit" ? "yellow" : "blue";
+
     Toastify({
       text: toastMessage,
       duration: 3000,
-      gravity: "top",  // Position of the toast
-      position: "right", // Right side of the screen
+      gravity: "top",
+      position: "right",
       style: {
-        background: toastType === "success" ? "green" : "red",
+        background: backgroundColor,
+        color: "black" // Optional: Set text color for better visibility on yellow
       }
     }).showToast();
   }
