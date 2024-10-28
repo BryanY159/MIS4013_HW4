@@ -53,7 +53,7 @@ include "view-footer.php";
   const actionType = "<?php echo $actionType; ?>";
 
   if (toastMessage) {
-    let backgroundColor = toastType === "error" ? "red" :
+    let backgroundColor = actionType === "Delete" ? "red" :
                           actionType === "Add" ? "green" : 
                           actionType === "Edit" ? "yellow" : "blue";
 
