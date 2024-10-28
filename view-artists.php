@@ -1,6 +1,7 @@
 <div class = "row">
   <div class = "col">
     <h1>Artists</h1>
+    <button type="button" class="btn btn-primary" id="tutorial-button" onclick="startIntro()">Start Tutorial</button>
   </div>
   <div class = "col-auto">
     <?php
