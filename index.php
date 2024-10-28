@@ -13,7 +13,7 @@ include "view-header.php";
 
     const steps = [
       {
-        intro: "Welcome to HW6 Dr. Bellah! Click on the following pages to find where my JavaScript libraries are implemented",
+        intro: "Welcome to HW6 Dr. Bellah! Click through this tutorial to find where my JavaScript libraries are implemented!",
       },
       {
         element: '#tutorial-button',
