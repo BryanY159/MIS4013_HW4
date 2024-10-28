@@ -38,7 +38,7 @@
               <form method="post" action="">
                 <input type="hidden" name="ArtistID" value="<?php echo $artist['ArtistID']; ?>">
                 <input type = "hidden" name = "actionType" value = "Delete">
-                <button type="submit" class="btn btn-danger" onclick="showSweetAlert()">Delete</button>
+                <button type="submit" class="btn btn-danger" onclick="showSweetAlert(this.form)">Delete</button>
               </form>
             </td>
             <td><a href="songs-by-artist.php?id=<?php echo $artist['ArtistID']; ?>">Songs</a></td>
@@ -51,12 +51,19 @@
 </div>
 
 <script>
-  function showSweetAlert() {
+  <script>
+  function showSweetAlert(form) {
     Swal.fire({
-    title: 'Wait!',
-    text: 'Are you sure?',
-    icon: 'question',
-    confirmButtonText: 'Yes'
-    })
+      title: 'Wait!',
+      text: 'Are you sure you want to delete this artist?',
+      icon: 'warning',
+      showCancelButton: true,  // This adds a "Cancel" button
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'No, keep it'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        form.submit();  // Submit the form if the user confirms
+      }
+    });
   }
 </script>
