@@ -5,7 +5,7 @@ include "view-header.php";
 
 <h1>Home</h1>
 
-<button type="button" class="btn btn-primary" onclick="startIntro()">Start Tutorial</button>
+<button type="button" class="btn btn-primary" id="tutorial-button" onclick="startIntro()">Start Tutorial</button>
 
 <script>
   function startIntro() {
@@ -14,7 +14,22 @@ include "view-header.php";
     const steps = [
       {
         element: '#artists-page',
-        intro: "Welcome to HW6 Dr. Bellah! Let's head to the Artists page to start this tutorial",
+        intro: "Welcome to HW6 Dr. Bellah! Click on the following pages to find where my JavaScript libraries are implemented",
+        position: 'bottom'
+      },
+      {
+        element: '#tutorial-button',
+        intro: "My first library is Intro.js. I will use it on each of the prompted pages to explain the JavaScript library. It allows for interactive tutorials like this.",
+        position: 'bottom'
+      },
+      {
+        element: '#artists-page',
+        intro: "My second and third library will be shown here on the Artists Page. I used SweetAlerts2 and Toastify.js to change the button alerts for adding, editing, and deleting (I only did it on this page to avoid just copying code).",
+        position: 'bottom'
+      },
+      {
+        element: '#users-page',
+        intro: "PLACEHOLDER FOR FOURTH LIBRARY!",
         position: 'bottom'
       }
     ];
