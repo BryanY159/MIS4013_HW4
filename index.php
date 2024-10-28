@@ -13,7 +13,7 @@ include "view-header.php";
 
     const steps = [
       {
-        element: '#artists-page',
+        element: '#entire-navbar',
         intro: "Welcome to HW6 Dr. Bellah! Click on the following pages to find where my JavaScript libraries are implemented",
         position: 'bottom'
       },
@@ -31,6 +31,9 @@ include "view-header.php";
         element: '#users-page',
         intro: "PLACEHOLDER FOR FOURTH LIBRARY!",
         position: 'bottom'
+      },
+      {
+        intro: "Navigate to these pages to find more tutorial buttons! Thank you!",
       }
     ];
 
