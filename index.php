@@ -5,6 +5,42 @@ include "view-header.php";
 
 <h1>Home</h1>
 
+<button type="button" class="btn btn-primary" onclick="startIntro()">Start Tutorial</button>
+
+<script>
+  function startIntro() {
+    const step = parseInt(localStorage.getItem('currentStep') || 0);
+
+    const steps = [
+      {
+        element: '#artists-page',
+        intro: "Welcome to HW6 Dr. Bellah! Let's head to the Artists page to start this tutorial",
+        position: 'bottom'
+      }
+    ];
+
+    introJs().setOptions({
+      initialStep: step,
+      steps: steps
+    })
+    .start()
+    .onchange(function() {
+      const currentStep = introJs().currentStep();
+      localStorage.setItem('currentStep', currentStep);
+    })
+    .oncomplete(function() {
+      localStorage.setItem('currentStep', 0); // Reset for next page
+      window.location.href = 'artists.php'; // Redirect to Songs page
+    })
+    .onexit(function() {
+      localStorage.removeItem('currentStep');  // Clear progress if exited
+    });
+  }
+</script>
+
+</body>
+</html>
+
 <?php
 include "view-footer.php";
 ?>
