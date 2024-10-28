@@ -68,35 +68,25 @@ include "view-footer.php";
       }
     }).showToast();
   }
-</script>
 
-<script>
-  function startIntro() {
-    const step = parseInt(localStorage.getItem('currentStep') || 0);
-
+function startIntro() {
     const steps = [
       {
+        intro: "Welcome to the Artists Page! I adjusted the alerts from HW4 on this page." // Step without element
+      },
+      {
         element: '#add-button',
-        intro: "Temporary test for second step working.",
+        intro: "Click here to add a new artist.",
         position: 'left'
       }
     ];
 
     introJs().setOptions({
-      initialStep: step,
       steps: steps
     })
     .start()
-    .onchange(function() {
-      const currentStep = introJs().currentStep();
-      localStorage.setItem('currentStep', currentStep);
-    })
-    .oncomplete(function() {
-      localStorage.setItem('currentStep', 0); // Reset for next page
-      window.location.href = 'artists.php'; // Redirect to Songs page
-    })
     .onexit(function() {
-      localStorage.removeItem('currentStep');  // Clear progress if exited
+      // Optional: actions when the tutorial is exited
     });
   }
 </script>
