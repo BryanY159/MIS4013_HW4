@@ -38,7 +38,7 @@
               <form method="post" action="">
                 <input type="hidden" name="ArtistID" value="<?php echo $artist['ArtistID']; ?>">
                 <input type = "hidden" name = "actionType" value = "Delete">
-                <button type="submit" class="btn btn-danger" onclick="showSweetAlert(this.form)">Delete</button>
+                <button type="submit" class="btn btn-danger deleteButton">Delete</button>
               </form>
             </td>
             <td><a href="songs-by-artist.php?id=<?php echo $artist['ArtistID']; ?>">Songs</a></td>
@@ -50,20 +50,25 @@
   </table>
 </div>
 
+
 <script>
-  <script>
-  function showSweetAlert(form) {
-    Swal.fire({
-      title: 'Wait!',
-      text: 'Are you sure you want to delete this artist?',
-      icon: 'warning',
-      showCancelButton: true,  // This adds a "Cancel" button
-      confirmButtonText: 'Yes, delete it!',
-      cancelButtonText: 'No, keep it'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        form.submit();  // Submit the form if the user confirms
-      }
+  document.querySelectorAll('.deleteButton').forEach(button => {
+  button.addEventListener('click', function(event) {
+      event.preventDefault();
+
+      Swal.fire({
+        title: 'Wait!',
+        text: 'Are you sure you want to delete this artist?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, delete it!',
+        cancelButtonText: 'No, keep it'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          button.closest('form').submit();
+        }
+      });
     });
-  }
+  });
+</script>
 </script>
