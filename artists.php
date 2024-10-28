@@ -9,23 +9,26 @@ if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
       if (insertArtist($_POST['ArtistName'], $_POST['ArtistGenre'])) {
-        echo '<div class="alert alert-success" role="alert"> Artist Added Successfully </div>';
+        $toastMessage = "Artist Added Successfully";
       } else {
-        echo '<div class="alert alert-danger" role="alert"> Error: Artist Not Added </div>';
+        $toastMessage = "Error: Artist Not Added";
+        $toastType = "error";
       }
       break;
     case "Edit":
       if (updateArtist($_POST['artistName'], $_POST['artistGenre'], $_POST['artistID'])) {
-        echo '<div class="alert alert-success" role="alert"> Artist Edited Successfully </div>';
+        $toastMessage = "Artist Edited Successfully";
       } else {
-        echo '<div class="alert alert-danger" role="alert"> Error: Artist Not Edited </div>';
+        $toastMessage = "Error: Artist Not Edited";
+        $toastType = "error";
       }
       break;
     case "Delete":
       if (deleteArtist($_POST['ArtistID'])) {
-        echo '<div class="alert alert-success" role="alert"> Artist Deleted Successfully </div>';
+        $toastMessage = "Artist Deleted Successfully";
       } else {
-        echo '<div class="alert alert-danger" role="alert"> Error: Artist Not Deleted </div>';
+        $toastMessage = "Error: Artist Not Deleted";
+        $toastType = "error";
       }
       break;
   }
@@ -36,3 +39,20 @@ $artists = selectArtists();
 include "view-artists.php";
 include "view-footer.php";
 ?>
+
+<script>
+  const toastMessage = "<?php echo $toastMessage; ?>";
+  const toastType = "<?php echo $toastType; ?>";
+
+  if (toastMessage) {
+    Toastify({
+      text: toastMessage,
+      duration: 3000,
+      gravity: "top",  // Position of the toast
+      position: "right", // Right side of the screen
+      style: {
+        background: toastType === "success" ? "green" : "red",
+      }
+    }).showToast();
+  }
+</script>
