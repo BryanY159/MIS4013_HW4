@@ -39,7 +39,7 @@
               <form method="post" action="">
                 <input type="hidden" name="SongID" value="<?php echo $song['SongID']; ?>">
                 <input type = "hidden" name = "actionType" value = "Delete">
-                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</button>
+                <button type="submit" class="btn btn-danger deleteButton">Delete</button>
               </form>
             </td>
           </tr>
@@ -49,3 +49,24 @@
     </tbody>
   </table>
 </div>
+
+<script>
+  document.querySelectorAll('.deleteButton').forEach(button => {
+  button.addEventListener('click', function(event) {
+      event.preventDefault();
+
+      Swal.fire({
+        title: 'Wait!',
+        text: 'Are you sure you want to delete this artist?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, delete it!',
+        cancelButtonText: 'No, keep it'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          button.closest('form').submit();
+        }
+      });
+    });
+  });
+</script>
