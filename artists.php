@@ -78,6 +78,17 @@ function startIntro() {
         element: '#add-button',
         intro: "Click here to add a new artist.",
         position: 'left'
+      },
+      {
+        element: '#edit-button-1',
+        intro: "Click here to edit an artist.",
+        position: 'top'
+      },
+
+      {
+        element: '#delete-button-1',
+        intro: "Click here to delete an artist.",
+        position: 'top'
       }
     ];
 
