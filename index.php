@@ -26,8 +26,8 @@ include "view-header.php";
         position: 'bottom'
       },
       {
-        element: '#users-page',
-        intro: "PLACEHOLDER FOR FOURTH LIBRARY!",
+        element: '#chart-page',
+        intro: "My fourth library will be shown here on the new Chart Page. I used Chart.js to create a chart visualization from the database.",
         position: 'bottom'
       },
       {
