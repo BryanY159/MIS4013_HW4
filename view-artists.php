@@ -39,7 +39,7 @@
               <form method="post" action="">
                 <input type="hidden" name="ArtistID" value="<?php echo $artist['ArtistID']; ?>">
                 <input type = "hidden" name = "actionType" value = "Delete">
-                <button type="submit" class="btn btn-danger deleteButton">Delete</button>
+                <button type="submit" class="btn btn-danger deleteButton" id="delete-button-<?php echo $artist['ArtistID']; ?>">Delete</button>
               </form>
             </td>
             <td><a href="songs-by-artist.php?id=<?php echo $artist['ArtistID']; ?>">Songs</a></td>
