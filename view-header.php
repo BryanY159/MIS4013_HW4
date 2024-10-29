@@ -45,6 +45,9 @@
             <li class="nav-item" id="playlists-page">
               <a class="nav-link" href="playlists-with-songs.php">Playlists with Songs</a>
             </li>
+            <li class="nav-item" id="chart-page">
+              <a class="nav-link" href="chart.php">Chart</a>
+            </li>
           </ul>
         </div>
       </div>
