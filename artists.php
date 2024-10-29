@@ -82,13 +82,13 @@ function startIntro() {
       {
         element: '#edit-button-1',
         intro: "Click here to edit an artist.",
-        position: 'top'
+        position: 'left'
       },
 
       {
         element: '#delete-button-1',
         intro: "Click here to delete an artist.",
-        position: 'top'
+        position: 'right'
       }
     ];
 
