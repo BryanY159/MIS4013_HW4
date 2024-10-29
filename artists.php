@@ -72,23 +72,26 @@ include "view-footer.php";
 function startIntro() {
     const steps = [
       {
-        intro: "Welcome to the Artists Page! I adjusted the alerts from HW4 on this page." // Step without element
+        intro: "Welcome to the Artists Page! I adjusted the alerts from HW4 on this page."
       },
       {
         element: '#add-button',
-        intro: "Click here to add a new artist.",
+        intro: "Here's the add button. Adding a new artist will trigger a green Toastify alert in the top right.",
         position: 'left'
       },
       {
         element: '#edit-button-1',
-        intro: "Click here to edit an artist.",
+        intro: "Here's the edit button. Editing an existing artist will trigger a yellow Toastify alert in the top right.",
         position: 'left'
       },
 
       {
         element: '#delete-button-1',
-        intro: "Click here to delete an artist.",
+        intro: "Here's the delete button. After clicking the delete button, you will get a confirmation alert using SweetAlerts2. This has the same function as the previous alert, but it is more visualizing appealing. Deleting an existing artist will trigger a red Toastify alert in the top right.",
         position: 'right'
+      },
+      {
+        intro: "Try this out by adding, editing, and deleting a temporary artist into the database!"
       }
     ];
 
