@@ -87,7 +87,7 @@ function startIntro() {
 
       {
         element: '#delete-button-1',
-        intro: "Here's the delete button. After clicking the delete button, you will get a confirmation alert using SweetAlerts2. This has the same function as the previous alert, but it is more visualizing appealing. Deleting an existing artist will trigger a red Toastify alert in the top right.",
+        intro: "Here's the delete button. After clicking the delete button, you will get a confirmation alert using SweetAlerts2. This has the same function as the previous alert, but it is more visually appealing. Deleting an existing artist will trigger a red Toastify alert in the top right.",
         position: 'right'
       },
       {
