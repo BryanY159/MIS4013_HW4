@@ -10,8 +10,6 @@ include "view-header.php";
 <!-- Canvas element for the Chart.js chart -->
 <canvas id="myChart" width="400" height="400"></canvas>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Load Chart.js -->
-
 <script>
   // Chart data and configuration
   const data = {
