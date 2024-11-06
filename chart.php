@@ -34,33 +34,13 @@ include "view-header.php";
 
         myChart.setOption(option);
     });
-    </script>
 
-  // Intro.js tutorial steps
   function startIntro() {
     const step = parseInt(localStorage.getItem('currentStep') || 0);
 
     const steps = [
       {
-        intro: "Welcome to HW6 Dr. Bellah! Click through this tutorial to find where my JavaScript libraries are implemented!",
-      },
-      {
-        element: '#tutorial-button',
-        intro: "This is Intro.js, the library for interactive tutorials like this one.",
-        position: 'bottom'
-      },
-      {
-        element: '#artists-page',
-        intro: "On the Artists page, I used SweetAlert2 and Toastify.js for notifications when adding, editing, or deleting artists.",
-        position: 'bottom'
-      },
-      {
-        element: '#myChart',
-        intro: "Here's a chart created using Chart.js to visualize sample data.",
-        position: 'top'
-      },
-      {
-        intro: "Thank you for exploring the tutorial! Feel free to navigate to other pages to see more.",
+        intro: "This is a Chart made with the ECharts library! There's not much more to say about this one. It is just a sample chart with random data!",
       }
     ];
 
@@ -70,4 +50,16 @@ include "view-header.php";
     })
     .start()
     .onchange(function() {
+      const currentStep = introJs().currentStep();
+      localStorage.setItem('currentStep', currentStep);
+    })
+    .oncomplete(function() {
+      localStorage.setItem('currentStep', 0); // Reset for next page
+      window.location.href = 'artists.php'; // Redirect to Songs page
+    })
+    .onexit(function() {
+      localStorage.removeItem('currentStep');  // Clear progress if exited
+    });
+  }
+</script>
     
